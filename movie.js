@@ -1,8 +1,9 @@
 const ui = new UI();
 const omd = new Omdbapi();
-const search = document.querySelector('#ok');
+const search = document.querySelector('#searchMovie');
 
-search.addEventListener('click', function(){
+search.addEventListener('keydown', function(){
+    ui.movieDisplay();
     const movieTitle = search.value;
     omd.getMovie(movieTitle)
     .then(function(movies){
