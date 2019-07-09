@@ -1,12 +1,11 @@
-class Omdbapi {
+class Apex {
     constructor(){
-        this.api_key = 'thewdb';
+        this.trn_api_key = 'fb47dc2b-155f-4f8c-b7bf-db83fae4b681';
     }
 
-    async getMovie(movieTitle) {
-        const moviesResponse = await fetch(`http://www.omdbapi.com/?S=${movieTitle}&apikey=${this.api_key}`);
-        const movies = await moviesResponse.json();
-        return movies;
+    async getUser() {
+        const profileResponse = await fetch(`https://public-api.tracker.gg/v2/apex/standard/search?platform=psn&query=BBaccz&TRN-Api-Key=fb47dc2b-155f-4f8c-b7bf-db83fae4b681`);
+        const profile = await profileResponse.json();
+        return profile;
     }
 }
-
