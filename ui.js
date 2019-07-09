@@ -21,8 +21,4 @@ class UI {
       </div>
         `;
     }
-    
-    movieDisplay() {
-        this.profile.innerHTML = '';
-    }
 }
